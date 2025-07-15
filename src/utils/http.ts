@@ -1,18 +1,18 @@
 // src/utils/http.ts
-import axios, { type AxiosRequestConfig, type AxiosResponse } from 'axios'
+import axios, { type AxiosRequestConfig, type AxiosResponse } from 'axios';
 
 const service = axios.create({
   baseURL: import.meta.env.VITE_API_BASE,
   timeout: 10000
-})
+});
 
 // 请求拦截器
-service.interceptors.request.use((config) => {
+service.interceptors.request.use(config => {
   // 可在此注入 token
   // const token = localStorage.getItem('token')
   // if (token) config.headers.Authorization = `Bearer ${token}`
-  return config
-})
+  return config;
+});
 
 // 响应拦截器
 service.interceptors.response.use(
@@ -26,16 +26,13 @@ service.interceptors.response.use(
   // },
 
   (res: AxiosResponse) => {
-    return res
+    return res;
   },
 
-
-
-
-  (err) => {
+  err => {
     // window.$message?.error(err.message || '网络错误')
-    return Promise.reject(err)
+    return Promise.reject(err);
   }
-)
+);
 
-export default service
+export default service;

@@ -1,1 +1,1 @@
-export * as IUserInfo from '@/types/api/user'
+export * as IUserInfo from '@/types/api/user';

@@ -1,4 +1,4 @@
-export interface IUserInfo{
+export interface IUserInfo {
   postId: number;
   id: number;
   name: string;

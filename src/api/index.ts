@@ -1,1 +1,1 @@
-export * as userApi from "./modules/user"
+export * as userApi from './modules/user';
